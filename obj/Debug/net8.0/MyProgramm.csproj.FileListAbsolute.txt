@@ -1,0 +1,28 @@
+D:\MyProgramm\MyProgramm\bin\Debug\net8.0\MyProgramm.exe
+D:\MyProgramm\MyProgramm\bin\Debug\net8.0\MyProgramm.deps.json
+D:\MyProgramm\MyProgramm\bin\Debug\net8.0\MyProgramm.runtimeconfig.json
+D:\MyProgramm\MyProgramm\bin\Debug\net8.0\MyProgramm.dll
+D:\MyProgramm\MyProgramm\bin\Debug\net8.0\MyProgramm.pdb
+D:\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.AssemblyInfoInputs.cache
+D:\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.AssemblyInfo.cs
+D:\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.csproj.CoreCompileInputs.cache
+D:\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.dll
+D:\MyProgramm\MyProgramm\obj\Debug\net8.0\refint\MyProgramm.dll
+D:\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.pdb
+D:\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.genruntimeconfig.cache
+D:\MyProgramm\MyProgramm\obj\Debug\net8.0\ref\MyProgramm.dll
+D:\Visual Studio\MyProgramm\MyProgramm\bin\Debug\net8.0\MyProgramm.exe
+D:\Visual Studio\MyProgramm\MyProgramm\bin\Debug\net8.0\MyProgramm.deps.json
+D:\Visual Studio\MyProgramm\MyProgramm\bin\Debug\net8.0\MyProgramm.runtimeconfig.json
+D:\Visual Studio\MyProgramm\MyProgramm\bin\Debug\net8.0\MyProgramm.dll
+D:\Visual Studio\MyProgramm\MyProgramm\bin\Debug\net8.0\MyProgramm.pdb
+D:\Visual Studio\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.AssemblyInfoInputs.cache
+D:\Visual Studio\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.AssemblyInfo.cs
+D:\Visual Studio\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.csproj.CoreCompileInputs.cache
+D:\Visual Studio\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.dll
+D:\Visual Studio\MyProgramm\MyProgramm\obj\Debug\net8.0\refint\MyProgramm.dll
+D:\Visual Studio\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.pdb
+D:\Visual Studio\MyProgramm\MyProgramm\obj\Debug\net8.0\MyProgramm.genruntimeconfig.cache
+D:\Visual Studio\MyProgramm\MyProgramm\obj\Debug\net8.0\ref\MyProgramm.dll
