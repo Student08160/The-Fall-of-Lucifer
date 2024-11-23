@@ -1,49 +1,40 @@
-﻿using System.ComponentModel.Design;
-using System.Numerics;
-using System.Reflection.Metadata.Ecma335;
-
-public class Program
+try
 {
-    public static void Main(string[] args)
+    // Объявляем необходимые переменные.
+    int a = 1, b = 1;
+    while (true)
     {
-        byte[,,] array = new byte[,,]
+        // Считываем исходные данные от пользователя.
+        Console.Write("Пожалуйста, введите первое число: ");
+        a = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Пожалуйста, введите второе число: ");
+        b = Convert.ToInt32(Console.ReadLine());
+
+        // Делаем условие вычисления.
+        if ((a < 0  a > 10) && (b < 0  b > 10))
         {
-            {
-                {1, 2},
-                {3, 4}
-            },
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Введённые числа недопустимы.");
+            Console.ForegroundColor = ConsoleColor.White;
 
-            {
-                {5, 6},
-                {7, 8}
-            },
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Пожалуйста, попробуйте ещё раз.");
+            Console.ForegroundColor = ConsoleColor.White;
 
-            {
-                {9, 10},
-                {11, 12}
-            },
-
-            {
-                {13, 14},
-                {15, 16}
-            }
-        };
-
-        for (byte i = 0; i < array.GetLength(0); i++)
-        {
-            Console.WriteLine();
-            Console.Write("{");
-            for (byte j = 0; j < array.GetLength(1); j++)
-            {
-                Console.Write("{");
-                //Console.WriteLine();
-                for (byte k = 0; k < array.GetLength(2); k++)
-                {
-                    Console.Write(array[i, j, k] + ", ");
-                }
-                Console.Write("}");
-            }
-            Console.WriteLine("}");
+            Main(args);
         }
+
+        // Производим вычисления.
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"Результат: {a * b}");
+        Console.ForegroundColor = ConsoleColor.White;
     }
+}
+catch (System.FormatException)
+{
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("Неверный формат данных.");
+    Console.ForegroundColor = ConsoleColor.White;
+    Main(args);
 }
