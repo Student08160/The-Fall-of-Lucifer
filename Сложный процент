@@ -1,0 +1,23 @@
+// Формула сложения числа с процентом: КЧ = ИЧ * (1 + П / 100)
+
+// Объявляем переменную процента.
+decimal percent = 7;
+
+// Считывваем исходные данные от пользователя.
+Console.Write("Сумма: ");
+decimal money = Convert.ToDecimal(Console.ReadLine());
+
+Console.Write("Месяцы: ");
+byte months = Convert.ToByte(Console.ReadLine());
+
+// Производим вычисления с помощью цикла.
+for (int i = 1; i <= months; i++)
+{
+    money = money * (1 + percent / 100);
+}
+
+// Выводим результат.
+Console.Write($"Конечная сумма: ");
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write(money + "р.");
+Console.ForegroundColor = ConsoleColor.White;
