@@ -1,0 +1,83 @@
+using System;
+
+namespace MyApp.Models
+{
+    // Класс Car представляет автомобиль с его маркой и моделью.
+    public class Car
+    {
+        // Поле make с модификатором доступа private, чтобы защитить его от прямого доступа извне.
+        private string make;
+        
+        // Поле model с модификатором доступа private, чтобы защитить его от прямого доступа извне.
+        private string model;
+
+        // Свойство Year с модификатором доступа public, чтобы его можно было свободно использовать.
+        public int Year { get; set; }
+
+        // Метод SetMakeAndModel с модификатором доступа internal, чтобы его могли использовать только классы в этой сборке.
+        internal void SetMakeAndModel(string make, string model)
+        {
+            this.make = make;
+            this.model = model;
+        }
+
+        // Метод DisplayInfo с модификатором доступа protected, чтобы его могли вызывать только производные классы.
+        protected void DisplayInfo()
+        {
+            Console.WriteLine($"Car Make: {make}, Model: {model}, Year: {Year}");
+        }
+    }
+
+    // Класс ElectricCar наследует класс Car и представляет электрический автомобиль.
+    public class ElectricCar : Car
+    {
+        // Поле batteryCapacity с модификатором доступа private, чтобы защитить его от прямого доступа извне.
+        private double batteryCapacity;
+
+        // Метод SetBatteryCapacity с модификатором доступа public, чтобы его могли использовать другие классы.
+        public void SetBatteryCapacity(double capacity)
+        {
+            batteryCapacity = capacity;
+        }
+
+        // Переопределение метода DisplayInfo, чтобы также выводить информацию о batteryCapacity.
+        protected new void DisplayInfo()
+        {
+            // Вызываем базовый метод для отображения основной информации.
+            base.DisplayInfo();
+            Console.WriteLine($"Battery Capacity: {batteryCapacity} kWh");
+        }
+    }
+}
+
+namespace MyApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Создаем экземпляр класса Car.
+            Car myCar = new Car();
+            
+            // Попытка установить значения для полей make и model (запрещено, так как они private).
+            // myCar.make = "Toyota"; // Ошибка компиляции
+            // myCar.model = "Camry"; // Ошибка компиляции
+
+            // Используем метод SetMakeAndModel для установки значений make и model.
+            myCar.SetMakeAndModel("Toyota", "Camry");
+            myCar.Year = 2022; // Устанавливаем значение Year.
+
+            // Создаем экземпляр класса ElectricCar.
+            ElectricCar myElectricCar = new ElectricCar();
+            myElectricCar.SetBatteryCapacity(75.0); // Устанавливаем значение batteryCapacity.
+            myElectricCar.SetMakeAndModel("Tesla", "Model S");
+            myElectricCar.Year = 2023; // Устанавливаем значение Year.
+
+            // Вызываем метод DisplayInfo для обоих классов.
+            // Вызов метода DisplayInfo для Car невозможен, так как он protected.
+            // myCar.DisplayInfo(); // Ошибка компиляции
+            // Вызов метода DisplayInfo для ElectricCar.
+            myElectricCar.DisplayInfo();
+        }
+    }
+}
