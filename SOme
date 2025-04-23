@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace WebApplication2.Controllers
+{
+    public class Laba1Controller : Controller
+    {
+
+        public List<string> GetList()
+        {
+            List<string> list = new List<string>();
+            list.Add("Томат");
+            list.Add("Картофель");
+            list.Add("Баклажан");
+            list.Add("Огурец");
+            list.Add("Кабачок");
+
+            return list;
+        }
+        // GET: Laba1
+        public ActionResult FirstViewMethod()
+        {
+            List<string> list = GetList();
+            return View(list);
+        }
+    }
+}
+----------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Routing;
+
+namespace WebApplication2
+{
+    public class RouteConfig
+    {
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Laba1", action = "FirstViewMethod", id = UrlParameter.Optional }
+            );
+        }
+    }
+}
+---------------------------------------
+
+
+@{
+    ViewBag.Title = "FirstViewMethod";
+}
+
+<h2>FirstViewMethod</h2>
+
+@foreach (var list in Model)
+            {
+                <p>@list</p>
+            }
+------------------------------------
+
